@@ -14,5 +14,10 @@ settings:
     suite_class: \PHPUnit_Framework_TestSuite
     memory_limit: 1024M
     colors: true
+coverage:
+    enabled: true
+    whitelist:
+        include:
+            - src/*
 params:
   - /config/.env
