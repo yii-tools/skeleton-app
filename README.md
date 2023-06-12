@@ -6,15 +6,27 @@
     <br>
 </p>
 
-## Install
+## Requirements
 
-For use create a new repository from this skeleton-app. For more information see [Creating a repository from a skeleton-app](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-skeleton-app).
+The minimum version of PHP required by this package is PHP 8.1.
 
-Also you can git clone this repository. For more information see [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+To install this package, you need a [composer](https://getcomposer.org/).
 
-## Usage
+## Installation
 
-[Check the documentation docs](/docs/README.md) to learn about usage.
+You can then install this project template using the following command:
+
+```
+composer create-project --prefer-dist --stability=dev yii-tools/skeleton-app <your project>
+```
+
+To launch development web server run:
+
+```
+composer run serve
+```
+
+Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
 
 ## Testing
 
