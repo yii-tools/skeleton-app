@@ -1,6 +1,6 @@
 {
     "name": "yii-tools/skeleton-app",
-    "type": "library",
+    "type": "project",
     "description": "Skeleton applications for YiiFramework v. 3.0.",
     "keywords": [
         "yii-tools",
