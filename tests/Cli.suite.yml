@@ -1,0 +1,4 @@
+actor: CliTester
+suite_namespace: Yii\Tests\Cli
+modules:
+    enabled: [Cli]
