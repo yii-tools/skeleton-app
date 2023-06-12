@@ -23,11 +23,9 @@ Also you can git clone this repository. For more information see [Cloning a repo
 ## CI status
 
 [![build](https://github.com/yii-tools/skeleton-app/actions/workflows/build.yml/badge.svg)](https://github.com/yii-tools/skeleton-app/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/yii-tools/skeleton-app/branch/main/graph/badge.svg?token=MF0XUGVLYC)](https://codecov.io/gh/yii-tools/skeleton-app)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyii-tools%2Ftemplate%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/yii-tools/skeleton-app/main)
 [![static analysis](https://github.com/yii-tools/skeleton-app/actions/workflows/static.yml/badge.svg)](https://github.com/yii-tools/skeleton-app/actions/workflows/static.yml)
 [![type-coverage](https://shepherd.dev/github/yii-tools/skeleton-app/coverage.svg)](https://shepherd.dev/github/yii-tools/skeleton-app)
-[![StyleCI](https://github.styleci.io/repos/494495136/shield?branch=main)](https://github.styleci.io/repos/494495136?branch=main)
+[![StyleCI](https://github.styleci.io/repos/651620426/shield?branch=main)](https://github.styleci.io/repos/651620426?branch=main)
 
 ## License
 
