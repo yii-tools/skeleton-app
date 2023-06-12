@@ -1,59 +1,43 @@
 <p align="center">
-    <a href="https://github.com/yii-tools/template" target="_blank">
+    <a href="https://github.com/yii-tools/skeleton-app" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
-    <h1 align="center">Template.</h1>
+    <h1 align="center">Skeleton Application for YiiFramework v.3.0.</h1>
     <br>
 </p>
 
-## Install
+## Requirements
 
-For use create a new repository from this template. For more information see [Creating a repository from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+The minimum version of PHP required by this package is PHP 8.1.
 
-Also you can git clone this repository. For more information see [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+To install this package, you need a [composer](https://getcomposer.org/).
 
-## Checking dependencies
+## Installation
 
-This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
+You can then install this project template using the following command:
 
-To run the checker, execute the following command:
-
-```shell
-composer run check-dependencies
+```
+composer create-project --prefer-dist --stability=dev yii-tools/skeleton-app <your project>
 ```
 
-## Mutation testing
+To launch development web server run:
 
-Mutation testing is checked with [Infection](https://infection.github.io/). To run it:
-
-```shell
-composer run mutation
+```
+composer run serve
 ```
 
-## Static analysis
-
-The code is statically analyzed with [Psalm](https://psalm.dev/). To run static analysis:
-
-```shell
-composer run psalm
-```
+Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
 
 ## Testing
 
-The code is tested with [PHPUnit](https://phpunit.de/). To run tests:
-
-```
-composer run test
-```
+[Check the documentation testing](/docs/testing.md) to learn about testing.
 
 ## CI status
 
-[![build](https://github.com/yii-tools/template/actions/workflows/build.yml/badge.svg)](https://github.com/yii-tools/template/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/yii-tools/template/branch/main/graph/badge.svg?token=MF0XUGVLYC)](https://codecov.io/gh/yii-tools/template)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyii-tools%2Ftemplate%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/yii-tools/template/main)
-[![static analysis](https://github.com/yii-tools/template/actions/workflows/static.yml/badge.svg)](https://github.com/yii-tools/template/actions/workflows/static.yml)
-[![type-coverage](https://shepherd.dev/github/yii-tools/template/coverage.svg)](https://shepherd.dev/github/yii-tools/template)
-[![StyleCI](https://github.styleci.io/repos/494495136/shield?branch=main)](https://github.styleci.io/repos/494495136?branch=main)
+[![build](https://github.com/yii-tools/skeleton-app/actions/workflows/build.yml/badge.svg)](https://github.com/yii-tools/skeleton-app/actions/workflows/build.yml)
+[![static analysis](https://github.com/yii-tools/skeleton-app/actions/workflows/static.yml/badge.svg)](https://github.com/yii-tools/skeleton-app/actions/workflows/static.yml)
+[![type-coverage](https://shepherd.dev/github/yii-tools/skeleton-app/coverage.svg)](https://shepherd.dev/github/yii-tools/skeleton-app)
+[![StyleCI](https://github.styleci.io/repos/651620426/shield?branch=main)](https://github.styleci.io/repos/651620426?branch=main)
 
 ## License
 
