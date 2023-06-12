@@ -23,5 +23,5 @@ return [
 
     RouteCollectionInterface::class => static fn (
         RouteCollectorInterface $routeCollector
-    ):RouteCollection => new RouteCollection($routeCollector),
+    ): RouteCollection => new RouteCollection($routeCollector),
 ];

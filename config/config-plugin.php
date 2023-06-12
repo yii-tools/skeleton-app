@@ -37,6 +37,6 @@ return [
         'routes' => 'routes.php',
     ],
     'config-plugin-options' => [
-        'source-directory' => "/config",
+        'source-directory' => '/config',
     ],
 ];
