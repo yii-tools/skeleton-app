@@ -38,5 +38,5 @@ return [
     ],
     'config-plugin-options' => [
         'source-directory' => 'config',
-    ]
+    ],
 ];
