@@ -19,10 +19,13 @@
         "psr/http-server-handler": "^1.0",
         "psr/log": "^3.0",
         "vlucas/phpdotenv": "^5.5",
+        "yii-tools/middleware": "^1.0@dev",
         "yii-tools/service": "^1.0@dev",
         "yiisoft/aliases": "^3.0",
         "yiisoft/config": "^1.3",
         "yiisoft/definitions": "^3.2",
+        "yiisoft/di": "^1.2",
+        "yiisoft/error-handler": "^3.0",
         "yiisoft/log": "^2.0",
         "yiisoft/log-target-file": "^3.0",
         "yiisoft/router": "^3.0",
@@ -30,8 +33,8 @@
         "yiisoft/session": "^2.0",
         "yiisoft/translator-message-php": "^1.1",
         "yiisoft/yii-console": "^2.1",
-        "yiisoft/yii-runner-console": "^2.0",
-        "yiisoft/yii-runner-http": "^2.0"
+        "yiisoft/yii-event": "^2.0",
+        "yiisoft/yii-http": "^1.0"
     },
     "require-dev": {
         "codeception/c3": "^2.7",
@@ -58,10 +61,7 @@
         "branch-alias": {
             "dev-main": "1.0.x-dev"
         },
-        "config-plugin-file": "/config/config-plugin.php",
-        "config-plugin-options": {
-            "source-directory": "config"
-        }
+        "config-plugin-file": "/config/config-plugin.php"
     },
     "config": {
         "allow-plugins": {
@@ -76,6 +76,6 @@
         "check-dependencies": "composer-require-checker",
         "mutation": "roave-infection-static-analysis-plugin",
         "psalm": "psalm",
-        "test": "phpunit"
+        "test": "codecept run"
     }
 }

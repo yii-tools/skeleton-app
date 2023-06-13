@@ -15,6 +15,6 @@ final class NotFoundHandlerCest
 
         $I->expectTo('see 404 page.');
         $I->seeResponseCodeIs(404);
-        $I->see('We were unable to find the page "/"');
+        $I->see('We were unable to find the page "/en/"');
     }
 }
