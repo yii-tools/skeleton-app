@@ -19,5 +19,3 @@ coverage:
     whitelist:
         include:
             - src/*
-params:
-  - /config/.env
