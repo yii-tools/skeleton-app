@@ -176,10 +176,7 @@ final class ServerRequestFactory
      */
     private function getHeadersFromGlobals(): array
     {
-        /** @var mixed $headers */
-        $headers = getallheaders();
-
-        if (function_exists('getallheaders') && ($headers !== false)) {
+        if (function_exists('getallheaders') && ($headers = getallheaders()) !== false) {
             /** @psalm-var array<string, string> $headers */
             return $headers;
         }
