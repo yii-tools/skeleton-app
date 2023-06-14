@@ -37,6 +37,8 @@ final class HttpApplication extends AbstractApplication
     protected string $diDelegatesGroup = 'di-delegates-web';
     protected string $diTagsGroup = 'di-tags-web';
     protected string $paramsGroup = 'params-web';
+    protected string $publicDirectory = '';
+
     /**
      * @psalm-var string[]
      */
@@ -45,6 +47,14 @@ final class HttpApplication extends AbstractApplication
      * @psalm-var string[]
      */
     protected array $nestedEventsGroups = ['events'];
+
+    public function withPublicDirectory(string $publicDirectory): self
+    {
+        $new = clone $this;
+        $new->publicDirectory = $publicDirectory;
+
+        return $new;
+    }
 
     public function withTemporaryErrorHandler(ErrorHandler $temporaryErrorHandler): self
     {
@@ -84,7 +94,14 @@ final class HttpApplication extends AbstractApplication
 
         /** @var Aliases $aliases */
         $aliases = $container->get(Aliases::class);
-        $aliases->set('@root', $this->rootPath);
+
+        if ($this->environment !== '') {
+            $aliases->set('@root', $this->rootPath);
+        }
+
+        if ($this->publicDirectory !== '') {
+            $aliases->set('@public', $this->publicDirectory);
+        }
 
         /**
          * @var ServerRequestFactory $serverRequestFactory
