@@ -78,6 +78,10 @@
         "check-dependencies": "composer-require-checker",
         "mutation": "roave-infection-static-analysis-plugin",
         "psalm": "psalm",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "./yii serve"
+        ],
         "test": "codecept run"
     }
 }
