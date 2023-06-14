@@ -8,7 +8,6 @@ return [
             '@assets' => '@public/assets',
             '@assetsUrl' => '@baseUrl/assets',
             '@baseUrl' => '/',
-            '@layout' => '@resources/layout',
             '@messages' => '@resources/messages',
             '@npm' => '@root/node_modules',
             '@public' => '@root/public',
