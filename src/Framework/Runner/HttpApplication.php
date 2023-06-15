@@ -38,6 +38,7 @@ final class HttpApplication extends AbstractApplication
     protected string $diTagsGroup = 'di-tags-web';
     protected string $paramsGroup = 'params-web';
     protected string $publicDirectory = '';
+    protected string $runtimeDirectory = 'runtime';
 
     /**
      * @psalm-var string[]
@@ -52,6 +53,14 @@ final class HttpApplication extends AbstractApplication
     {
         $new = clone $this;
         $new->publicDirectory = $publicDirectory;
+
+        return $new;
+    }
+
+    public function withRuntimeDirectory(string $runtimeDirectory): self
+    {
+        $new = clone $this;
+        $new->runtimeDirectory = $runtimeDirectory;
 
         return $new;
     }
@@ -101,6 +110,10 @@ final class HttpApplication extends AbstractApplication
 
         if ($this->publicDirectory !== '') {
             $aliases->set('@public', $this->publicDirectory);
+        }
+
+        if ($this->runtimeDirectory !== '') {
+            $aliases->set('@runtime', $this->runtimeDirectory);
         }
 
         /**
