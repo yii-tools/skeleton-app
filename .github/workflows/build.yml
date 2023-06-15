@@ -23,7 +23,7 @@ name: build
 
 jobs:
   phpunit:
-    uses: yiisoft/actions/.github/workflows/phpunit.yml@master
+    uses: yii-tools/actions/.github/workflows/build.yml@main
     with:
       extensions: fileinfo, intl
       os: >-
