@@ -38,4 +38,4 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 /**
  * Run HTTP application runner
  */
-(new HttpApplication())->withRootPath(dirname(__DIR__))->run();
+(new HttpApplication())->withDebug(false)->withRootPath(dirname(__DIR__))->run();
