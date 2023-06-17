@@ -14,6 +14,7 @@ return [
             '@resources' => '@root/src/Framework/resources',
             '@runtime' => '@root/runtime',
             '@vendor' => '@root/vendor',
+            '@views' => '@root/resources/views',
         ],
     ],
 ];
