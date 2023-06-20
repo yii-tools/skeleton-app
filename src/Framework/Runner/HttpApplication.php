@@ -49,7 +49,7 @@ final class HttpApplication extends AbstractApplication
      */
     protected array $nestedEventsGroups = ['events'];
 
-    public function withPublicDirectory(string $publicPath): self
+    public function withPublicPath(string $publicPath): self
     {
         $new = clone $this;
         $new->publicPath = $publicPath;
@@ -57,7 +57,7 @@ final class HttpApplication extends AbstractApplication
         return $new;
     }
 
-    public function withRuntimeDirectory(string $runtimePath): self
+    public function withRuntimePath(string $runtimePath): self
     {
         $new = clone $this;
         $new->runtimePath = $runtimePath;
