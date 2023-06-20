@@ -37,8 +37,8 @@ final class HttpApplication extends AbstractApplication
     protected string $diDelegatesGroup = 'di-delegates-web';
     protected string $diTagsGroup = 'di-tags-web';
     protected string $paramsGroup = 'params-web';
-    protected string $publicDirectory = '';
-    protected string $runtimeDirectory = 'runtime';
+    protected string $publicPath = '';
+    protected string $runtimePath = '';
 
     /**
      * @psalm-var string[]
@@ -49,18 +49,18 @@ final class HttpApplication extends AbstractApplication
      */
     protected array $nestedEventsGroups = ['events'];
 
-    public function withPublicDirectory(string $publicDirectory): self
+    public function withPublicDirectory(string $publicPath): self
     {
         $new = clone $this;
-        $new->publicDirectory = $publicDirectory;
+        $new->publicPath = $publicPath;
 
         return $new;
     }
 
-    public function withRuntimeDirectory(string $runtimeDirectory): self
+    public function withRuntimeDirectory(string $runtimePath): self
     {
         $new = clone $this;
-        $new->runtimeDirectory = $runtimeDirectory;
+        $new->runtimePath = $runtimePath;
 
         return $new;
     }
@@ -104,17 +104,7 @@ final class HttpApplication extends AbstractApplication
         /** @var Aliases $aliases */
         $aliases = $container->get(Aliases::class);
 
-        if ($this->environment !== '') {
-            $aliases->set('@root', $this->rootPath);
-        }
-
-        if ($this->publicDirectory !== '') {
-            $aliases->set('@public', $this->publicDirectory);
-        }
-
-        if ($this->runtimeDirectory !== '') {
-            $aliases->set('@runtime', $this->runtimeDirectory);
-        }
+        $this->setAliases($aliases);
 
         /**
          * @var ServerRequestFactory $serverRequestFactory
@@ -170,5 +160,20 @@ final class HttpApplication extends AbstractApplication
         }
 
         $registered->register();
+    }
+
+    private function setAliases(Aliases $aliases): void
+    {
+        if ($this->rootPath !== '') {
+            $aliases->set('@root', $this->rootPath);
+        }
+
+        if ($this->publicPath !== '') {
+            $aliases->set('@public', $this->publicPath);
+        }
+
+        if ($this->runtimePath !== '') {
+            $aliases->set('@runtime', $this->runtimePath);
+        }
     }
 }

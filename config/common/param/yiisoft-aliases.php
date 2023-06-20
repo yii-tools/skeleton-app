@@ -5,7 +5,6 @@ declare(strict_types=1);
 return [
     'yiisoft/aliases' => [
         'aliases' => [
-            '@root' => dirname(__DIR__, 2),
             '@assets' => '@public/assets',
             '@assetsUrl' => '@baseUrl/assets',
             '@baseUrl' => '/',
