@@ -39,8 +39,8 @@ final class ImmutabilityCest
     {
         $httpApplication = new HttpApplication();
 
-        $I->assertNotSame($httpApplication, $httpApplication->withPublicDirectory(''));
-        $I->assertNotSame($httpApplication, $httpApplication->withRuntimeDirectory(''));
+        $I->assertNotSame($httpApplication, $httpApplication->withPublicPath(''));
+        $I->assertNotSame($httpApplication, $httpApplication->withRuntimePath(''));
         $I->assertNotSame($httpApplication, $httpApplication->withTemporaryErrorHandler($I->get(ErrorHandler::class)));
     }
 }
