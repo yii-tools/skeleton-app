@@ -90,6 +90,12 @@ final class HttpApplication extends AbstractApplication
 
         $container = $this->getContainer();
 
+        /** @var Aliases $aliases */
+        $aliases = $container->get(Aliases::class);
+
+        // Set aliases for paths.
+        $this->setAliases($aliases);
+
         // Register error handler with real container-configured dependencies.
         /** @var ErrorHandler $actualErrorHandler */
         $actualErrorHandler = $container->get(ErrorHandler::class);
@@ -100,11 +106,6 @@ final class HttpApplication extends AbstractApplication
 
         /** @var Application $application */
         $application = $container->get(Application::class);
-
-        /** @var Aliases $aliases */
-        $aliases = $container->get(Aliases::class);
-
-        $this->setAliases($aliases);
 
         /**
          * @var ServerRequestFactory $serverRequestFactory
