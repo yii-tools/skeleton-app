@@ -3,5 +3,5 @@ modules:
     enabled:
         - Asserts
         - Yii\Codeception\Module\Yii3:
-            configPath: ./
+            rootPath: ./
     step_decorators: ~
