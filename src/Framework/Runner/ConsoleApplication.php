@@ -26,7 +26,7 @@ final class ConsoleApplication extends AbstractApplication
     /**
      * @psalm-var string[]
      */
-    protected array $nestedParamsGroups = ['params'];
+    protected array $nestedParamsGroups = ['params', 'application-params'];
     /**
      * @psalm-var string[]
      */
