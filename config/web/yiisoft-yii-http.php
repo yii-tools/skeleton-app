@@ -17,7 +17,7 @@ return [
                     $params['middlewares']
                 ),
             ),
-            'fallbackHandler' => $params['yiisoft/yii-http']['application'] ?? Reference::to(NotFoundHandler::class),
+            'fallbackHandler' => $params['yiisoft/yii-http']['fallback-handler'] ?? Reference::to(NotFoundHandler::class),
         ],
     ],
 ];
