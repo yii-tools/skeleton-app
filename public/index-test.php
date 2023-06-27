@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 use Yii\Framework\Runner\HttpApplication;
 
+$c3 = \dirname(__DIR__) . '/c3.php';
+
+if (\file_exists($c3)) {
+    require_once $c3;
+}
+
 /**
  * @psalm-var string $_SERVER['REQUEST_URI']
  *
@@ -15,8 +21,8 @@ if (PHP_SAPI === 'cli-server') {
      *
      * Serve static files as is.
      */
-    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    if (is_file(__DIR__ . $path)) {
+    $path = \parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if (\is_file(__DIR__ . $path)) {
         return false;
     }
 
@@ -26,9 +32,9 @@ if (PHP_SAPI === 'cli-server') {
     $_SERVER['SCRIPT_NAME'] = '/index.php';
 }
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once \dirname(__DIR__) . '/vendor/autoload.php';
 
 /**
  * Run HTTP application runner
  */
-(new HttpApplication())->withDebug(false)->withRootPath(dirname(__DIR__))->run();
+(new HttpApplication())->withDebug(false)->withRootPath(\dirname(__DIR__))->run();

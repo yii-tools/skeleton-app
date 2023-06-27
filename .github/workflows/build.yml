@@ -23,10 +23,10 @@ name: build
 
 jobs:
   phpunit:
-    uses: yii-tools/actions/.github/workflows/build.yml@main
+    uses: yii-tools/actions/.github/workflows/codeception.yml@update-actions
     with:
       extensions: fileinfo, intl
       os: >-
         ['ubuntu-latest', 'windows-latest']
       php: >-
-        ['8.1', '8.2']
+        ['8.1', '8.2', '8.3']
