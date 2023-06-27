@@ -29,10 +29,11 @@
 /.gitattributes                 export-ignore
 /.github                        export-ignore
 /.gitignore                     export-ignore
+/.styleci.yml                   export-ignore
 /codeception.yml                export-ignore
 /composer-require-checker.json  export-ignore
 /docs                           export-ignore
 /phpunit.xml.dist               export-ignore
 /psalm.xml                      export-ignore
-/styleci.yml                    export-ignore
+/rector.php                     export-ignore
 /tests                          export-ignore
