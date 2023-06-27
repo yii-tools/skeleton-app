@@ -111,7 +111,7 @@ final class HttpApplication extends AbstractApplication
         /**
          * @var ServerRequestInterface $serverRequestFactory
          */
-        $serverRequestFactory = ServerRequestCreator::createFromGlobals();
+        $serverRequestFactory = ServerRequestCreator::create();
         $serverRequest = $serverRequestFactory->withAttribute('applicationStartTime', $startTime);
 
         try {
