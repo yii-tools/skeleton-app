@@ -22,7 +22,7 @@ on:
 name: build
 
 jobs:
-  phpunit:
+  codeception:
     uses: yii-tools/actions/.github/workflows/codeception.yml@main
     with:
       extensions: fileinfo, intl
