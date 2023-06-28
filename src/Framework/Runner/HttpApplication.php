@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Yii\Framework\Runner;
 
 use ErrorException;
-use HttpSoft\ServerRequest\ServerRequestCreator;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -107,12 +106,9 @@ final class HttpApplication extends AbstractApplication
 
         /** @var Application $application */
         $application = $container->get(Application::class);
-
-        /**
-         * @var ServerRequestInterface $serverRequestFactory
-         */
-        $serverRequestFactory = ServerRequestCreator::create();
-        $serverRequest = $serverRequestFactory->withAttribute('applicationStartTime', $startTime);
+        /** @var ServerRequestInterface $serverRequest */
+        $serverRequest = $container->get(ServerRequestInterface::class);
+        $serverRequest = $serverRequest->withAttribute('applicationStartTime', $startTime);
 
         try {
             $application->start();
